@@ -1,0 +1,327 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body {
+    color: white;
+    background: linear-gradient(180deg, rgb(63, 63, 63), rgb(56, 56, 56),  rgb(56, 56, 56));
+    
+    justify-content: center;
+    min-height: 100vh;
+    align-items: center;
+    text-align: center;
+    display: flex;
+}
+
+.box {
+    position: relative;
+    margin: 0 auto;
+    height: 529px;
+    width: 409px;
+    background-color: transparent;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    box-shadow: 5px 5px 15px rgba(0,0,0, 30%);
+}
+
+.form {
+    padding-top: 25px;
+    border-radius: 8px;
+    margin: 0 auto;
+    position: absolute;
+    height: 520px;
+    width: 400px;
+    background-color: rgb(110, 110, 110);
+    z-index: 1;
+   
+}
+
+.box::before {
+    content: '';
+    position: absolute;
+    background: linear-gradient(135deg,aqua, aqua, transparent, transparent);
+    bottom: 50%;
+    left: 50%;
+    height: 520px;
+    width: 400px;
+    transform-origin: bottom left;
+    animation: rotate 5s linear infinite;
+}
+
+.box::after {
+    content: '';
+    position: absolute;
+    background: linear-gradient(135deg, transparent, transparent, aqua, aqua);
+    bottom: -50%;
+    left: -50%;
+    height: 520px;
+    width: 400px;
+    transform-origin: top right;
+    animation: rotate 5s linear infinite;
+}
+
+h1 {
+    margin-bottom: 25px;
+}
+
+#user, #password{
+    color: rgb(243, 243, 243);
+    margin: 0 auto;
+    margin-top: 10px;
+    padding-left: 2em;
+    width: 16rem;
+    height: 2rem;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid rgba(0, 255, 255, .3);
+    transition: border .3s;
+}
+
+#user:focus, #password:focus {
+    border-bottom: 2px solid aqua;
+    border-radius: 8px;
+}
+
+
+
+
+.input-password {
+    margin-top: 15px;
+}
+
+.forgot {
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 5px;
+    width: 18em;
+}
+
+.forgot-password {
+    color: rgb(184, 184, 184);
+    font-size: 13px;
+    text-decoration: none;
+    
+    margin-top: 4px;
+}
+
+.remind-me {
+  color: rgb(184, 184, 184);
+  font-size: 13px;
+  text-decoration: none;
+  margin-right: 10px;
+  margin-top: 4px;
+  cursor: default;
+}
+
+.forgot-password:hover {
+    text-decoration: underline 1px solid rgb(184, 184, 184);
+    color: rgb(243, 243, 243);
+}
+
+
+
+
+#userIcon, #passwordIcon {
+    position: absolute;
+    transform: translate(5px,15px);
+    color: rgb(226, 226, 226);
+}
+
+.platforms i {
+  font-size: 20px;
+}
+
+.fa-apple {
+  transform: scale(115%);
+}
+
+@keyframes LightSwipe {
+  0% {
+    color: unset;
+  }
+  50%{
+    color: rgba(0, 255, 255, 0.8);
+  }
+  80% {
+    color: unset;
+  }
+  100%{
+    color: unset;
+  }
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(-360deg);
+    }
+}
+
+#login-btn .new {
+  background-color: aqua;
+  color: rgb(110, 110, 110);
+  font-size: 25px;
+}
+
+.btn-40,
+.btn-40 *,
+.btn-40 :after,
+.btn-40 :before,
+.btn-40:after,
+.btn-40:before {
+  border: 0 solid;
+  box-sizing: border-box;
+ 
+}
+.btn-40 {
+  -webkit-tap-highlight-color: transparent;
+  background-color: transparent;
+  background-image: none;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 8px;
+  font-size: 100%;
+  line-height: 1.5;
+  margin: 0 auto;
+  padding: 0;
+  margin-top: 10px;
+  outline: none;
+}
+.btn-40:disabled {
+  cursor: default;
+}
+.btn-40:-moz-focusring {
+  outline: auto;
+}
+.btn-40 svg {
+  display: block;
+}
+.btn-40 [hidden] {
+  display: none;
+}
+.btn-40 {
+  border: rgb(255, 255, 255) 1px solid;
+  
+  box-sizing: border-box;
+  display: block;
+  font-weight: 900;
+  width: 16rem;
+  overflow: hidden;
+  padding: 1.3rem;
+  position: relative;
+}
+.btn-40 .new,
+.btn-40 .old {
+  transition: transform 0.2s;
+}
+.btn-40 .old {
+  display: grid;
+  inset: 0;
+  place-content: center;
+  position: absolute;
+  
+}
+.btn-40:hover .old {
+  transform: translateY(100%);
+}
+.btn-40 .new {
+   border-radius: 8px;
+  background: rgb(110, 110, 110);
+  outline: none;
+  color: aqua;
+  display: grid;
+  inset: 0;
+  place-content: center;
+  pointer-events: none;
+  position: absolute;
+  transform: translateX(-100%);
+  text-decoration: none;
+}
+.btn-40:hover .new {
+  transform: translateX(0);
+}
+
+.line {
+  margin: 0 auto;
+  margin-top: 15px;
+  color: rgb(226, 226, 226);
+  margin-bottom: 15px;  
+  z-index: 99;
+  
+  width: 80%;
+  height: 25px;
+  border-radius: 8px;
+}
+
+.line::before {
+  content: '_______________';
+  margin: 0 auto;
+  
+  transform: translate(0,-50px);
+  color: transparent;
+  
+  width: 15em;
+  
+  
+}
+
+.line::after {
+  content: '_______________';
+  margin: 0 auto;
+  
+ color: transparent;
+  
+  
+  width: 15em;
+  height: 3px;
+  
+}
+
+
+@media (max-width: 768px) {
+
+  .box {
+    
+    width: 309px;
+    
+  }
+
+  .box::before {
+    height: 520px;
+    width: 300px;
+   
+}
+
+  .box::after {
+    
+   
+    width: 300px;
+    
+}
+
+  .form {
+    width: 300px;
+  }
+
+
+.forgot {
+  width: 19em;
+}
+
+
+
+
+
+
+}
