@@ -17,3 +17,13 @@ A simple Login Form made with HTML and CSS. blur background on the main box.
 Simple responsive features, animated buttons and input borders. Purple and blue theme.
 
 ![Login page - Google Chrome 2023-11-24 07-54-45](https://github.com/Bryanlamanna/LoginForms/assets/107689206/fc23f261-c8c3-4ca7-b69f-e510365d923d)
+
+LoginForm - Cozy 
+
+https://incandescent-starlight-07883e.netlify.app/
+
+A simple Login Form made with HTML and CSS. Border animations made with linear gradient and Background-position.
+Simple responsive features, animated buttons. brown theme.
+
+
+![Login page - Google Chrome 2023-11-24 08-00-33](https://github.com/Bryanlamanna/LoginForms/assets/107689206/6bbe7d76-a83a-4d4f-bdb7-e37a21e05ac0)
