@@ -16,10 +16,10 @@ body {
 }
 
 .box {
-    animation: pulse 2.5s linear infinite;
+    animation: pulse 5s linear infinite;
     position: relative;
-    height: 30em;
-    width: 20em;
+    height: 37em;
+    width: 50em;
     background-color: rgb(255, 17, 0);
     
    display: flex;
@@ -30,11 +30,11 @@ body {
 
 .underbox {
     
-    animation: blury 2.5s linear infinite;
+    animation: blury 5s linear infinite;
     backdrop-filter: blur(15px);
     margin: 0 auto;
-    height: 36em;
-    min-width: 26em;
+    height: 43em;
+    min-width: 56em;
     background-color: transparent;
     display: flex;
    align-items: center;
@@ -42,32 +42,60 @@ body {
 }
 
 .form {
-    
+    overflow: hidden;
     border-radius: 8px;
-    height: 30em;
-    width: 20em;
-    background-color: rgb(102, 102, 102);
-    box-shadow: 5px 5px 15px rgba(0,0,0,.5);
+    height: 37em;
+    width: 50em;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 5px 5px 15px rgba(0,0,0,.3);
+}
+
+.slider {
+    width: 150%;
+    height: 37em;
+    display: flex;
+}
+
+.slide, .slide-mid {
+    width: 25em;
+    height: 37em;
+    
+}
+
+.slide-mid {
+    background-color: rgb(255, 17, 0);
+}
+
+@keyframes switch {
+    0% {
+
+    }
+    33.33%{
+
+    }
+    66.66%{
+        
+    }
 }
 
 @keyframes pulse {
     0% {
-        background-color: rgb(255, 17, 0);
+        background-color: rgba(255, 17, 0, 0.493);
     }
-    40% {
+    30% {
         background-color: transparent;
     }
-    60% {
+    70% {
         background-color: transparent;
     }
     100% {
-        background-color: rgb(255, 17, 0);
+        background-color: rgba(255, 17, 0, 0.493);
     }
 }
 
 @keyframes blury {
     0% {
-        backdrop-filter: blur(15px);
+        backdrop-filter: blur(10px);
     }
     40% {
         backdrop-filter: blur(0px);
@@ -76,6 +104,6 @@ body {
         backdrop-filter: blur(0px);
     }
     100% {
-        backdrop-filter: blur(15px);
+        backdrop-filter: blur(10px);
     }
 }
